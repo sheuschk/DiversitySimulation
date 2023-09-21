@@ -1,0 +1,13 @@
+*/__pycache__/*
+*/_pycache_/*
+/.idea
+/.ipynb_checkpoints
+/res
+/results
+starting_script.txt
+.Rhistory
+*/res/
+*/results/
+*/downloaded_results/
+/downloaded_results/
+*/poster_results/
