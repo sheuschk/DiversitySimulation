@@ -31,7 +31,10 @@ def create_env(env_type, grid_size):
         fitness_m = holder_table(grid_size); env_title = "HolderTable"
     else:
         raise NotImplementedError("Fitness Env not Implemented")
-    fitness_m = fitness_m * (1 / fitness_m.max())
+    
+    fitness_m -= fitness_m.min()
+    fitness_m = fitness_m / fitness_m.max()
+    
     return fitness_m, env_title
 
 
@@ -229,17 +232,14 @@ class NK_landscape():
         self.max_value = max_val
         self.min_value = min_val
 
-    def get_scaled_fitness_new_calculation(self, state):
-        """Use if min max are known, but not all values are generated"""
-        assert self.max_value != None
-        return np.round((self.f(state) - self.min_value) / (self.max_value - self.min_value), 2)
-
-    def get_scaled_fitness(self, state):
+    def get_fitness(self, state):
         assert len(state) == self.N
         key = int("".join(map(str, state)), 2)
         value = self.fitness_dict[key]
         return np.round((value - self.min_value) / (self.max_value - self.min_value), 2)
+    
 
+    
 class NK_landscape_loaded(NK_landscape):
 
     def __init__(self, N, K, fitness_dict):
