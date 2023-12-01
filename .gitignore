@@ -12,3 +12,4 @@ starting_script.txt
 /downloaded_results/
 */poster_results/
 *.pkl
+*.npy
