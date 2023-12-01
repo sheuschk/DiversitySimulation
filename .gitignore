@@ -1,5 +1,8 @@
 */__pycache__/*
 */_pycache_/*
+*__pycache__
+*/__pycache__
+__pycache__
 /.idea
 /.ipynb_checkpoints
 /res
@@ -13,3 +16,6 @@ starting_script.txt
 */poster_results/
 *.pkl
 *.npy
+*__pycache__
+*/__pycache__
+__pycache__
