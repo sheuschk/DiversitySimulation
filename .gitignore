@@ -19,3 +19,5 @@ starting_script.txt
 *__pycache__
 */__pycache__
 __pycache__
+*/intervention/
+*/no_intervention/
